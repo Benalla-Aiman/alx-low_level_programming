@@ -1,18 +1,20 @@
 #include <stdio.h>
+
 int main(void)
 {
-long n = 612852475143;
-long i, largest_factor;
-for (i = 2; i * i <= n; i++)
-{
-while (n % i == 0)
-{
-largest_factor = i;
-n /= i;
-}
-}
-if (n > 1)
-largest_factor = n;
-printf("%ld\n", largest_factor);
-return 0;
+    long n = 612852475143;
+    long factor = 2;
+    while (n > 1)
+    {
+        if (n % factor == 0)
+        {
+            n /= factor;
+        }
+        else
+        {
+            factor++;
+        }
+    }
+    printf("%ld\n", factor);
+    return 0;
 }
