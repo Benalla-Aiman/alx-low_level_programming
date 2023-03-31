@@ -8,20 +8,14 @@
 */
 char *_strcat(char *dest, char *src)
 {
-int dest_len = 0, i = 0;
-/* Find the length of the destination string */
-while (dest[dest_len] != '\0')
-{
-dest_len++;
-}
-/* Append the source string to the destination string */
-while (src[i] != '\0')
-{
-dest[dest_len] = src[i];
+int i = 0, j = 0;
+while (dest[i] != '\0')
 i++;
-dest_len++;
+while (src[j] != '\0') {
+dest[i] = src[j];
+i++;
+j++;
 }
-/* Add the null character to the end of the concatenated string */
-dest[dest_len] = '\0';
+dest[i] = '\0';
 return dest;
 }
