@@ -1,10 +1,10 @@
+int check_prime(int n, int i);
 /**
 * is_prime_number - checks if a number is prime
 * @n: the number to check
 *
 * Return: 1 if n is prime, 0 otherwise
 */
-int check_prime(int n, int i);
 int is_prime_number(int n)
 {
 if (n < 2) /* numbers less than 2 are not prime */
