@@ -11,4 +11,9 @@ void copy_file(int fd_from, int fd_to, char **argv);
 void close_files(int fd_from, int fd_to);
 int main(int argc, char **argv);
 
+int read_elf_header(const char *filename, Elf64_Ehdr *eh);
+void display_elf_header(Elf64_Ehdr *eh);
+int main(int argc, char *argv[]);
+
+
 #endif /* MAIN_H */
